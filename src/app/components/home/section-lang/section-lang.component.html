@@ -1,0 +1,29 @@
+<!-- <div class="section-lang" #[{{sectionID}}]> -->
+<div class="section-lang" [id]="sectionID">
+    <div class="row" [ngStyle]="{'flex-direction':sectionStyle}">
+        <div class="col-lg-6 px-0 part-content">
+            <div class="contents" [style]='"background-image:url("+bgBanner+")"'>
+                <div class="banner">
+                    <div class="logo">
+                        <img [src]="logo" alt="Logo">
+                    </div>
+                    <div class="title">
+                        <h2>{{bannerTitle}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 px-0 ">
+            <div class="about-section" [style]='"background-image:url("+aboutSectionBg+")"'>
+                <h2>{{aboutSectionTitle}}</h2>
+                <p>{{aboutSectionP}}</p>
+                <div class="btns">
+                    <button mat-button class="secrion-btn watch-btn" [style]='"background-color:"+aboutSectionBtn+""'
+                        [routerLink]='"/"+link'>Watch Now for Free</button>
+                    <button mat-button class="secrion-btn know-btn" [routerLink]='"/"+link'
+                        [style]='"border: 2px solid "+aboutSectionBtn+";color:"+aboutSectionBtn+""'>Know More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

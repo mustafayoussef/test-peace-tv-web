@@ -1,0 +1,214 @@
+// Globle Style in Section lang
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.font {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  text-align: center;
+}
+// Style by Class
+.section-lang {
+  min-height: 100vh;
+  overflow: hidden;
+  .row {
+    min-height: 100vh;
+    .contents {
+      position: relative;
+      @extend .d-flex;
+      min-height: 100vh;
+      background-size: 100% 100%;
+      .banner {
+        @extend .d-flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../../../../assets/images/section-lang/en/BG_Banner.svg");
+        background-size: cover;
+        .logo {
+          padding-top: 13rem;
+          text-align: center;
+          img {
+            width: 100%;
+          }
+        }
+        .title {
+          margin-top: 36px;
+          text-align: center;
+          h2 {
+            font-size: 25px;
+            color: #f5f5f5;
+            text-shadow: 0px 3px 6px #0000009c;
+            @extend .font;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+    .about-section {
+      @extend .d-flex;
+      min-height: 100vh;
+      background-size: cover;
+      h2 {
+        @extend .font;
+        color: #fecd65;
+        font-size: 26px;
+      }
+      p {
+        margin: 15px 59px 25px;
+        color: #ffffff;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        padding: 0 90px;
+        text-align: center;
+        line-height: 1.4;
+      }
+      .btns {
+        @extend .d-flex;
+        flex-direction: row;
+        .secrion-btn {
+          @extend .font;
+          border-radius: 50px;
+          font-size: 20px;
+          margin: 0 13px;
+        }
+        .watch-btn {
+          color: #ffffff;
+          padding: 12px 31px 13px;
+        }
+        .know-btn {
+          background-color: #f5f5f5;
+          padding: 12px 41px 13px;
+        }
+      }
+    }
+  }
+
+  @media screen and(min-width:320px) and (max-width: 480px) {
+    .contents {
+      .logo {
+        padding-top: 1rem !important;
+        img {
+          width: 70% !important;
+        }
+      }
+      .title {
+        width: 90% !important;
+      }
+    }
+    .about-section {
+      h2 {
+        padding: 0 30px;
+        font-size: 22px !important;
+      }
+      p {
+        padding: 0 10px !important;
+      }
+      .btns {
+        flex-direction: column !important;
+        .secrion-btn {
+          margin: 13px 0 !important;
+        }
+      }
+    }
+  }
+  @media screen and(min-width:481px) and (max-width: 768px) {
+    .contents {
+      .logo {
+        padding-top: 1rem !important;
+        img {
+          width: 75% !important;
+        }
+      }
+      .title {
+        width: 87% !important;
+        h2 {
+          font-size: 26px !important;
+        }
+      }
+    }
+    .about-section {
+      h2 {
+        padding: 0 30px;
+      }
+      p {
+        padding: 0 30px !important;
+      }
+      .btns-media-query {
+        flex-direction: column !important;
+        .secrion-btn {
+          margin: 13px 0 !important;
+        }
+      }
+    }
+  }
+  @media screen and(min-width:769px) and (max-width: 991px) {
+    .contents {
+      .logo {
+        padding-top: 5rem !important;
+        img {
+          width: 80% !important;
+        }
+      }
+      .title {
+        h2 {
+          font-size: 30px !important;
+        }
+      }
+    }
+    .about-section {
+      p {
+        line-height: 1.5 !important;
+        padding: 0 133px !important;
+      }
+    }
+  }
+  @media screen and(min-width:992px) and (max-width: 1200px) {
+    .contents {
+      .logo {
+        padding-top: 2rem !important;
+        img {
+          width: 85% !important;
+        }
+      }
+      .title {
+        padding: 0 28px;
+        h2 {
+          font-size: 33px !important;
+        }
+      }
+    }
+    .about-section {
+      h2 {
+        padding: 0px 55px;
+      }
+      p {
+        padding: 0px 39px !important;
+      }
+      .btns {
+        .watch-btn {
+          padding: 12px 25px 13px !important;
+        }
+        .know-btn {
+          padding: 12px 35px 13px !important;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1201px) {
+    .about-section {
+      h2 {
+        padding: 0px 19px;
+        font-size: 35px !important;
+      }
+      p {
+        padding: 0px 26px !important;
+      }
+    }
+  }
+}

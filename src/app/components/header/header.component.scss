@@ -1,0 +1,106 @@
+// Global Style in Header
+.header-btn {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  font-family: "Roboto Slab", serif;
+}
+// Style by class
+.navbar {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid #fecd65;
+  .container-fluid {
+    margin: 0 80px;
+    text-align: center;
+    .navbar-brand {
+      margin: 14px 0 13px;
+    }
+    .url {
+      font-size: 24px;
+      color: #fecd65;
+      font-family: "Roboto Slab", serif;
+    }
+    .btns {
+      .btn-watch {
+        @extend .header-btn;
+        background-color: #dedede;
+        color: #5d5d5d;
+        padding: 9px 12px 8px 14px;
+        mat-icon {
+          margin-right: 14.5px;
+        }
+      }
+      .btn-signin {
+        @extend .header-btn;
+        color: white;
+        background-color: #0e2b4e;
+        padding: 8px 25px 9px;
+      }
+    }
+  }
+  @media screen and(min-width:320px) and (max-width: 480px) {
+    .container-fluid {
+      margin: 0 50px;
+    }
+    .navbar-brand {
+      img {
+        width: 70px;
+      }
+    }
+  }
+  @media screen and(min-width:481px) and (max-width: 768px) {
+    .container-fluid {
+      margin: 0 60px;
+    }
+    .navbar-brand {
+      img {
+        width: 80px;
+      }
+    }
+  }
+  @media screen and(min-width:769px) and (max-width: 1024px) {
+    .container-fluid {
+      .navbar-brand {
+        img {
+          width: 90px;
+        }
+      }
+      .url {
+        font-size: 20px;
+      }
+    }
+  }
+  @media screen and(min-width:1025px) and (max-width: 1200px) {
+    .container-fluid {
+      .navbar-brand {
+        img {
+          width: 100px;
+        }
+      }
+      .url {
+        font-size: 20px;
+      }
+    }
+  }
+  @media screen and(min-width:992px) {
+    .url {
+      font-size: 24px;
+    }
+    .btns {
+      button {
+        margin: 0 15px;
+      }
+    }
+  }
+  @media screen and(max-width:992px) {
+    .btns {
+      flex-direction: column;
+      align-items: center;
+      button {
+        margin: 5px 0;
+      }
+    }
+  }
+}
